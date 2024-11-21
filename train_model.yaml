@@ -1,0 +1,6 @@
+path: yolo_dataset/
+train: train
+val: val
+nc: 1
+names:
+  0: handwritten_line
