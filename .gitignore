@@ -1,3 +1,5 @@
 synthetic_dataset/
 runs/
 yolo_dataset/
+raw_dataset/
+synthetic_dataset_v2/
