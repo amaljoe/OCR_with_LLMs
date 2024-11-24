@@ -3,3 +3,5 @@ runs/
 yolo_dataset/
 raw_dataset/
 synthetic_dataset_v2/
+synthetic_labels/
+yolo_dataset_v2/
