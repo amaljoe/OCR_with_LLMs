@@ -9,7 +9,7 @@ from nltk.translate import bleu_score
 from nltk.translate.bleu_score import SmoothingFunction
 import torch
 
-yolo_weights_path = "runs/detect/train103/weights/last.pt"
+yolo_weights_path = "final_wts.pt"
 
 device = 'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
 
@@ -135,15 +135,15 @@ def process_image(image):
         df, bounding_path = inference(image_path, debug=False, return_texts='final')
         text = df['text'].str.cat(sep='\n')
     bounding_img = Image.open(bounding_path)
-    return bounding_img, text
+    return text, bounding_img
 
 # Define Gradio Interface
 interface = gr.Interface(
     fn=process_image,  # Call the process_image function
     inputs=gr.Image(type="pil"),  # Expect an image input
     outputs=[
-        gr.Image(type="pil", label="Bounding Box Image"),
         gr.Textbox(label="Extracted Text"),
+        gr.Image(type="pil", label="Bounding Box Image"),
     ],
     title="OCR Pipeline with YOLO and TrOCR",
     description="Upload an image to detect text regions with YOLO, merge bounding boxes, and extract text using TrOCR.",
