@@ -134,13 +134,17 @@ def process_image(image):
         image_path = temp_image.name
         df, bounding_path = inference(image_path, debug=False, return_texts='final')
         text = df['text'].str.cat(sep='\n')
-    return text
+    bounding_img = Image.open(bounding_path)
+    return bounding_img, text
 
 # Define Gradio Interface
 interface = gr.Interface(
     fn=process_image,  # Call the process_image function
     inputs=gr.Image(type="pil"),  # Expect an image input
-    outputs="text",
+    outputs=[
+        gr.Image(type="pil", label="Bounding Box Image"),
+        gr.Textbox(label="Extracted Text"),
+    ],
     title="OCR Pipeline with YOLO and TrOCR",
     description="Upload an image to detect text regions with YOLO, merge bounding boxes, and extract text using TrOCR.",
 )
