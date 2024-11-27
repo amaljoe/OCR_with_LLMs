@@ -186,8 +186,8 @@ interface = gr.Interface(
     inputs=gr.Image(type="pil"),  # Expect an image input
     outputs=[
         gr.Image(type="pil", label="Bounding Box Image"),
-        gr.Textbox(label="Extracted Text"),
-        gr.Textbox(label="Post Processed Text"),
+        gr.Textbox(label="Extracted Text (Custom trained YOLO Object Detection + TrOCR Vision Transformer)"),
+        gr.Textbox(label="Post Processed Text (BLEU score based filtering + Roberta contextual understanding)"),
     ],
     title="OCR Pipeline with YOLO, TrOCR and Roberta",
     description="Upload an image to detect text regions with YOLO, merge bounding boxes, and extract text using TrOCR which is then preprocessed with Roberta for contextual understanding.",
