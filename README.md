@@ -4,6 +4,11 @@ This project focuses on improving OCR for handwritten texts, extending TrOCR to 
 
 ---
 
+## Inference Example
+<img width="1728" alt="Screenshot 2024-11-30 at 2 28 11 AM" src="https://github.com/user-attachments/assets/60670aaf-b1dc-44e1-803d-fa1c835ca392">
+
+---
+
 ## **How to Run the Project**
 
 1. **Run the Application with UI**  
@@ -29,12 +34,6 @@ The project used a systematic approach to train a model for detecting bounding b
 2. **Model Training**:
     - Trained a YOLO model (initialized with YOLOv11 weights) on approximately 1,100 labeled examples.
     - Trained for 100 epochs, achieving a final validation loss of <1.
-
----
-
-## Inference Example
-<img width="1727" alt="Screenshot 2024-11-30 at 2 10 24 AM" src="https://github.com/user-attachments/assets/c93cf056-9acc-49d3-a256-d884edf181d3">
-
 
 ---
 
