@@ -30,6 +30,11 @@ The project used a systematic approach to train a model for detecting bounding b
     - Trained a YOLO model (initialized with YOLOv11 weights) on approximately 1,100 labeled examples.
     - Trained for 100 epochs, achieving a final validation loss of <1.
 
+---
+
+## Inference Example
+<img width="1727" alt="Screenshot 2024-11-30 at 2 10 24 AM" src="https://github.com/user-attachments/assets/c93cf056-9acc-49d3-a256-d884edf181d3">
+
 
 ---
 
