@@ -5,7 +5,8 @@ This project focuses on improving OCR for handwritten texts, extending TrOCR to 
 ---
 
 ## Inference Example
-<img width="1728" alt="Screenshot 2024-11-30 at 2 28 11 AM" src="https://github.com/user-attachments/assets/60670aaf-b1dc-44e1-803d-fa1c835ca392">
+
+<img width="1444" alt="Screenshot 2024-11-30 at 2 54 17 AM" src="https://github.com/user-attachments/assets/9267f047-eb29-412c-b0f9-02c994fb0d16">
 
 ---
 
